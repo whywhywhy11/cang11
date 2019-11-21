@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.alipay.auto</groupId>
+    <artifactId>TotoroCommon</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.codehaus.plexus</groupId>
+                        <artifactId>plexus-compiler-javac-errorprone</artifactId>
+                        <version>2.8</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.google.errorprone</groupId>
+                        <artifactId>error_prone_core</artifactId>
+                        <version>2.0.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- 为了避免被覆盖掉，放在靠前的位置-->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.4.8.v20171121</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-exec</artifactId>
+            <version>1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay.totoro</groupId>
+            <artifactId>bizlib</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.53.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.32</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>2.4.13-0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.10</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <!--Alibaba-group-->
+                <repository>
+                    <id>taobao-repo</id>
+                    <name>taobao Repositories Group</name>
+                    <url>http://repo.alibaba-inc.com/nexus/content/groups/alirepositiry/</url>
+                </repository>
+                <repository>
+                    <id>alibaba-repo</id>
+                    <name>Alibaba Repositories Group</name>
+                    <url>http://mvnrepo.alibaba-inc.com/mvn/repository/</url>
+                </repository>
+
+                <!--  alipay  -->
+                <!-- test -->
+                <repository>
+                    <id>test-alipay-mobile</id>
+                    <url>http://mvn.test.alipay.net/artifactory/content/groups/alipay-mobile</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>test-central</id>
+                    <url>http://mvn.test.alipay.net/artifactory/content/repositories/central</url>
+                </repository>
+                <repository>
+                    <id>test-mobile</id>
+                    <url>http://mvn.test.alipay.net/artifactory/content/repositories/mobile/</url>
+                </repository>
+                <!-- dev -->
+                <repository>
+                    <id>dev-central</id>
+                    <url>http://mvn.dev.alipay.net/artifactory/content/repositories/central</url>
+                </repository>
+                <repository>
+                    <id>dev-alipay</id>
+                    <url>http://mvn.dev.alipay.net/artifactory/content/groups/alipay-mobile</url>
+                </repository>
+                <repository>
+                    <id>dev-mobile</id>
+                    <url>http://mvn.dev.alipay.net:8081/artifactory/content/repositories/mobile</url>
+                </repository>
+                <!-- mobile-snapshot -->
+                <repository>
+                    <id>mobile-snapshot</id>
+                    <url>http://mvn.dev.alipay.net/artifactory/content/repositories/mobile-snapshot</url>
+                </repository>
+                <!--下面的配置和口碑/航旅/财富/搜索专有库，为了效率默认注释掉了,需要时根据业务自行去掉注释-->
+                <!--  koubei  -->
+                <!--repository>
+                  <id>test-koubei</id>
+                  <url>http://mvn.test.alipay.net/artifactory/content/groups/koubei-group</url>
+                </repository>
+                <repository>
+                  <id>dev-koubei</id>
+                  <url>http://mvn.dev.alipay.net/artifactory/content/groups/koubei-group</url>
+                </repository-->
+                <!-- alitrip -->
+                <!--repository>
+                  <id>test-alitrip</id>
+                  <url>http://mvn.test.alipay.net/artifactory/content/groups/alitrip-group</url>
+                </repository-->
+                <!--  wealth  -->
+                <!--repository>
+                  <id>test-wealth</id>
+                  <url>http://mvn.test.alipay.net/artifactory/content/groups/wealth-group</url>
+                </repository-->
+                <!--  alisearch  -->
+                <!--repository>
+                  <id>test-alisearch</id>
+                  <url>http://mvn.test.alipay.net/artifactory/content/groups/alisearch-group</url>
+                </repository-->
+
+                <!-- bintray  -->
+                <repository>
+                    <id>central-bintray</id>
+                    <url>http://jcenter.bintray.com</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <!--  apache  -->
+                <repository>
+                    <id>central_apache</id>
+                    <url>http://repository.apache.org/snapshots/</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <!-- alipay relase (dependency missing!)-->
+                <repository>
+                    <id>alipay-release</id>
+                    <url>http://mvn.dev.alipay.net/artifactory/content/repositories/Alipay-Releases</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <!--<repository><id>repo.jenkins-ci.org</id><url>http://repo.jenkins-ci.org/public/</url></repository>-->
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>ali-centeral-repo</id>
+                    <url>http://repo.alibaba-inc.com/nexus/content/repositories/central</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>sontype-centeral-repo</id>
+                    <url>http://repo1.maven.org/maven2/</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://mvn.dev.alipay.net:8080/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central-bintray</id>
+                    <url>http://jcenter.bintray.com</url>
+                </pluginRepository>
+                <!--
+                <pluginRepository>
+                  <id>taobao-repo</id>
+                  <name>Alibaba Repositories Group</name>
+                  <url>http://repo.alibaba-inc.com/nexus/content/groups/alirepositiry/</url>
+                </pluginRepository>
+                <pluginRepository>
+                  <id>alibaba-repo</id>
+                  <name>Alibaba Repositories Group</name>
+                  <url>http://mvnrepo.alibaba-inc.com/mvn/repository/</url>
+                </pluginRepository>
+                -->
+            </pluginRepositories>
+        </profile>
+
+        <!-- For pure sofa project -->
+        <profile>
+            <id>dev2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>central_prod</id>
+                    <url>http://mvn.test.alipay.net:8080/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>central</id>
+                    <url>http://mvn.dev.alipay.net:8080/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>snapshots</id>
+                    <url>http://mvn.dev.alipay.net:8080/artifactory/repo</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://mvn.dev.alipay.net:8080/artifactory/repo</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+</project>
