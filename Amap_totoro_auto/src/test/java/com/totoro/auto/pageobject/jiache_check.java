@@ -61,6 +61,7 @@ public class jiache_check extends BaseCase {
 
 
     public  Boolean check_fan(String diu, String typeId, String errorId) {
+        //fan11
         String Url = "http://qa.client.gaode.test/HuiChuan/getOneResult/";
         String Url1 = Url + "?uid=" + diu + "&typeid=" + typeId + "&errorid=" + errorId;
         sleep ( 5000 );
@@ -80,62 +81,241 @@ public class jiache_check extends BaseCase {
                 //System.out.println ( result );
 
                 //解析
-                int count1 = 0;int index1 = 0;int f1=0;
+                int index1 = 0;int f1=0;
                 String pp1 ="\"sourcepage\": \"28\"";
-                while( ( index1 = result.indexOf(pp1, index1) ) != -1 )
-                {
-                    index1 = index1+pp1.length();
-                    count1++;
+                index1 = result.indexOf ( pp1, index1 );
+                if(index1>0) {f1=f1+1;}
+
+
+                if(typeId=="1009") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1009\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2805\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u5176\\u4ed6\\u95ee\\u9898\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test5\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304834\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count1>0 ){f1=1;}
 
-                int count2 = 0;int index2 = 0;int f2=0;
-                String pp2 ="\"type\": \"1009\"";
-                while( ( index2 = result.indexOf(pp2, index2) ) != -1 )
-                {
-                    index2 = index2+pp2.length();
-                    count2++;
+                if(typeId=="1006") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1006\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2802\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u641c\\u7d22\\u7ed3\\u679c\\u9519\\u8bef\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test4\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304844\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count2>0 ){f2=1;}
 
-                int count3 = 0;int index3 = 0;int f3=0;
-                String pp3 ="\"error_id\": \"2805\"";
-                while( ( index3 = result.indexOf(pp3, index3) ) != -1 )
-                {
-                    index3 = index3+pp3.length();
-                    count3++;
+                if(typeId=="1007") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1007\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2803\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u65e0\\u6cd5\\u4f7f\\u7528\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test3\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304854\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count3>0 ){f3=1;}
 
-                int count4 = 0;int index4 = 0;int f4=0;
-                String pp4 ="\"subtype\": \"\\u5176\\u4ed6\\u95ee\\u9898\"";
-                while( ( index4 = result.indexOf(pp4, index4) ) != -1 )
-                {
-                    index4 = index4+pp4.length();
-                    count4++;
+                if(typeId=="1012") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1012\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2806\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u65e0\\u6cd5\\u5524\\u9192\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test1\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304854\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count4>0 ){f4=1;}
 
-                int count5 = 0;int index5 = 0;int f5=0;
-                String pp5 ="\"uDes\": \"test5\"";
-                while( ( index5 = result.indexOf(pp5, index5) ) != -1 )
-                {
-                    index5 = index5+pp5.length();
-                    count5++;
+                if(typeId=="1008") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1008\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2804\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u8bed\\u97f3\\u52a9\\u624b\\u5efa\\u8bae\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test6\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304854\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count5>0 ){f5=1;}
 
-                int count6 = 0;int index6 = 0;int f6=0;
-                String pp6 ="\"object_adcode\": \"110000\"";
-                while( ( index6 = result.indexOf(pp6, index6) ) != -1 )
-                {
-                    index6 = index6+pp6.length();
-                    count6++;
+                if(typeId=="1005") {
+                    int index2 = 0;
+                    String pp2 = "\"type\": \"1005\"";
+                    index2 = result.indexOf ( pp2, index2 );
+                    if (index2 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index3 = 0;
+                    String pp3 = "\"error_id\": \"2801\"";
+                    index3 = result.indexOf ( pp3, index3 );
+                    if (index3 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index4 = 0;
+                    String pp4 = "\"subtype\": \"\\u8bed\\u97f3\\u8bc6\\u522b\\u9519\\u8bef\"";
+                    index4 = result.indexOf ( pp4, index4 );
+                    if (index4 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index5 = 0;
+                    String pp5 = "\"uDes\": \"test7\"";
+                    index5 = result.indexOf ( pp5, index5 );
+                    if (index5 > 0) {
+                        f1 = f1 + 1;
+                    }
+
+                    int index6 = 0;
+                    String pp6 = " \"contact\": \"18811304854\"";
+                    index6 = result.indexOf ( pp6, index6 );
+                    if (index6 > 0) {
+                        f1 = f1 + 1;
+                    }
                 }
-                if(count6>0 ){f6=1;}
+
+                int index7 = 0;
+                String pp7 ="\"object_adcode\": \"110000\"";
+                index7 = result.indexOf ( pp7, index7 );
+                if(index7>0) {f1=f1+1;}
 
 
-                ff=f1+f2+f3+f4+f5+f6;
+                ff=f1;
                 //System.out.println ( ff );
 
             } finally {
@@ -153,13 +333,19 @@ public class jiache_check extends BaseCase {
         }
 
 
-        if (ff == 6) {
+        if (ff == 7) {
             return  true;
         }
-        if (ff != 6) {
+        if (ff != 7) {
             return false;
         }
         return null;
     }
+
+
+
+
+
+
 }
 

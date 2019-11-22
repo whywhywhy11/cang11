@@ -2,9 +2,9 @@ checkPoints:
 - succeed: true
   testDesc: 用例开始执行
   testStep: 用例开始执行
-  time: '2019-11-21 11:43:55'
+  time: '2019-11-22 16:33:27'
 - succeed: true
   testDesc: 用例执行完成
   testStep: 用例执行完成
-  time: '2019-11-21 11:46:16'
+  time: '2019-11-22 16:35:57'
 

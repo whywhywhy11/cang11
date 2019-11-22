@@ -122,7 +122,7 @@ public class jiache extends BaseCase {
 
 
     public void fan_1() {
-        //点击语音button
+        //进入语音反馈
         sleep(5000);
         WebElement f1 = driver.findElementById("com.autonavi.minimap:id/lottie_view");
         f1.click();
@@ -147,6 +147,12 @@ public class jiache extends BaseCase {
         WebElement f4 = driver.findElementByXPath("//*[@text='我要反馈语音问题']");
         f4.click();
 
+    }
+
+
+//1009
+    public void fan_11() {
+
         //点击其他问题
         sleep(2000);
         WebElement f5 = driver.findElementByXPath("//*[@text='其他问题']");
@@ -159,6 +165,9 @@ public class jiache extends BaseCase {
         driver.sendKeys ( "test5" );
 
         //再次滑动屏幕
+        sleep(5000);
+        int height = driver.getWindowSize().height;
+        int width = driver.getWindowSize().width;
         sleep(1000);
         driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
 
@@ -166,7 +175,7 @@ public class jiache extends BaseCase {
         sleep(2000);
         Utils.clickText("方便我们联系您核实情况");
         sleep(1000);
-        driver.sendKeys ( "18811304744" );
+        driver.sendKeys ( "18811304834" );
 
         //点击添加图片、拍摄图片、上传图片
         sleep(2000);
@@ -189,13 +198,245 @@ public class jiache extends BaseCase {
         sleep(8000);
     }
 
+//1006
+    public void fan_12() {
 
+        //点击其他问题
+        sleep(2000);
+        WebElement f5 = driver.findElementByXPath("//*[@text='搜索结果错误']");
+        f5.click();
 
+        //点击描述并输入
+        sleep(2000);
+        Utils.clickText("补充详细的描述，加速审核");
+        sleep(1000);
+        driver.sendKeys ( "test4" );
 
+        //再次滑动屏幕
+        sleep(5000);
+        int height = driver.getWindowSize().height;
+        int width = driver.getWindowSize().width;
+        sleep(1000);
+        driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
 
+        //点击联系并输入
+        sleep(2000);
+        Utils.clickText("方便我们联系您核实情况");
+        sleep(1000);
+        driver.sendKeys ( "18811304844" );
 
+        //点击添加图片、拍摄图片、上传图片
+        sleep(2000);
+        IDLRect idlRectf8 = driver.searchImgInCurrentPage(new File(System.getProperty("user.dir") + "/pic/jiache/tianjiatu.jpg"));
+        idlRectf8.click(driver);
+        sleep(2000);
+        WebElement f81 = driver.findElementById("com.autonavi.minimap:id/camera_item");
+        f81.click();
+        sleep(2000);
+        WebElement f82 = driver.findElementById("com.autonavi.minimap:id/id_capture_btn");
+        f82.click();
+        sleep(6000);
+        WebElement f83 = driver.findElementById("com.autonavi.minimap:id/camera_ok_btn");
+        f83.click();
 
+        //点击提交
+        sleep(3000);
+        WebElement f9 = driver.findElementByXPath("//*[@text='提交']");
+        f9.click();
+        sleep(8000);
+    }
 
+//1007
+    public void fan_13() {
+
+        //点击其他问题
+        sleep(2000);
+        WebElement f5 = driver.findElementByXPath("//*[@text='无法使用']");
+        f5.click();
+
+        //点击描述并输入
+        sleep(2000);
+        Utils.clickText("补充详细的描述，加速审核");
+        sleep(1000);
+        driver.sendKeys ( "test3" );
+
+        //再次滑动屏幕
+        sleep(5000);
+        int height = driver.getWindowSize().height;
+        int width = driver.getWindowSize().width;
+        sleep(1000);
+        driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
+
+        //点击联系并输入
+        sleep(2000);
+        Utils.clickText("方便我们联系您核实情况");
+        sleep(1000);
+        driver.sendKeys ( "18811304854" );
+
+        //点击添加图片、拍摄图片、上传图片
+        sleep(2000);
+        IDLRect idlRectf8 = driver.searchImgInCurrentPage(new File(System.getProperty("user.dir") + "/pic/jiache/tianjiatu.jpg"));
+        idlRectf8.click(driver);
+        sleep(2000);
+        WebElement f81 = driver.findElementById("com.autonavi.minimap:id/camera_item");
+        f81.click();
+        sleep(2000);
+        WebElement f82 = driver.findElementById("com.autonavi.minimap:id/id_capture_btn");
+        f82.click();
+        sleep(6000);
+        WebElement f83 = driver.findElementById("com.autonavi.minimap:id/camera_ok_btn");
+        f83.click();
+
+        //点击提交
+        sleep(3000);
+        WebElement f9 = driver.findElementByXPath("//*[@text='提交']");
+        f9.click();
+        sleep(8000);
+    }
+
+//1012
+    public void fan_14() {
+
+        //点击其他问题
+        sleep(2000);
+        WebElement f5 = driver.findElementByXPath("//*[@text='无法唤醒']");
+        f5.click();
+
+        //点击描述并输入
+        sleep(2000);
+        Utils.clickText("补充详细的描述，加速审核");
+        sleep(1000);
+        driver.sendKeys ( "test1" );
+
+        //再次滑动屏幕
+        sleep(5000);
+        int height = driver.getWindowSize().height;
+        int width = driver.getWindowSize().width;
+        sleep(1000);
+        driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
+
+        //点击联系并输入
+        sleep(2000);
+        Utils.clickText("方便我们联系您核实情况");
+        sleep(1000);
+        driver.sendKeys ( "18811304854" );
+
+        //点击添加图片、拍摄图片、上传图片
+        sleep(2000);
+        IDLRect idlRectf8 = driver.searchImgInCurrentPage(new File(System.getProperty("user.dir") + "/pic/jiache/tianjiatu.jpg"));
+        idlRectf8.click(driver);
+        sleep(2000);
+        WebElement f81 = driver.findElementById("com.autonavi.minimap:id/camera_item");
+        f81.click();
+        sleep(2000);
+        WebElement f82 = driver.findElementById("com.autonavi.minimap:id/id_capture_btn");
+        f82.click();
+        sleep(6000);
+        WebElement f83 = driver.findElementById("com.autonavi.minimap:id/camera_ok_btn");
+        f83.click();
+
+        //点击提交
+        sleep(3000);
+        WebElement f9 = driver.findElementByXPath("//*[@text='提交']");
+        f9.click();
+        sleep(8000);
+    }
+
+//1008
+    public void fan_15() {
+
+    //点击其他问题
+    sleep(2000);
+    WebElement f5 = driver.findElementByXPath("//*[@text='语音助手建议']");
+    f5.click();
+
+    //点击描述并输入
+    sleep(2000);
+    Utils.clickText("补充详细的描述，加速审核");
+    sleep(1000);
+    driver.sendKeys ( "test6" );
+
+    //再次滑动屏幕
+    sleep(5000);
+    int height = driver.getWindowSize().height;
+    int width = driver.getWindowSize().width;
+    sleep(1000);
+    driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
+
+    //点击联系并输入
+    sleep(2000);
+    Utils.clickText("方便我们联系您核实情况");
+    sleep(1000);
+    driver.sendKeys ( "18811304854" );
+
+    //点击添加图片、拍摄图片、上传图片
+    sleep(2000);
+    IDLRect idlRectf8 = driver.searchImgInCurrentPage(new File(System.getProperty("user.dir") + "/pic/jiache/tianjiatu.jpg"));
+    idlRectf8.click(driver);
+    sleep(2000);
+    WebElement f81 = driver.findElementById("com.autonavi.minimap:id/camera_item");
+    f81.click();
+    sleep(2000);
+    WebElement f82 = driver.findElementById("com.autonavi.minimap:id/id_capture_btn");
+    f82.click();
+    sleep(6000);
+    WebElement f83 = driver.findElementById("com.autonavi.minimap:id/camera_ok_btn");
+    f83.click();
+
+    //点击提交
+    sleep(3000);
+    WebElement f9 = driver.findElementByXPath("//*[@text='提交']");
+    f9.click();
+    sleep(8000);
+}
+
+//1005
+    public void fan_16() {
+
+    //点击其他问题
+    sleep(2000);
+    WebElement f5 = driver.findElementByXPath("//*[@text='语音识别错误']");
+    f5.click();
+
+    //点击描述并输入
+    sleep(2000);
+    Utils.clickText("补充详细的描述，加速审核");
+    sleep(1000);
+    driver.sendKeys ( "test7" );
+
+    //再次滑动屏幕
+    sleep(5000);
+    int height = driver.getWindowSize().height;
+    int width = driver.getWindowSize().width;
+    sleep(1000);
+    driver.swipe(width * 1 / 2, height * 3 / 4, width * 1 / 2, height * 1 / 4, 1000);
+
+    //点击联系并输入
+    sleep(2000);
+    Utils.clickText("方便我们联系您核实情况");
+    sleep(1000);
+    driver.sendKeys ( "18811304854" );
+
+    //点击添加图片、拍摄图片、上传图片
+    sleep(2000);
+    IDLRect idlRectf8 = driver.searchImgInCurrentPage(new File(System.getProperty("user.dir") + "/pic/jiache/tianjiatu.jpg"));
+    idlRectf8.click(driver);
+    sleep(2000);
+    WebElement f81 = driver.findElementById("com.autonavi.minimap:id/camera_item");
+    f81.click();
+    sleep(2000);
+    WebElement f82 = driver.findElementById("com.autonavi.minimap:id/id_capture_btn");
+    f82.click();
+    sleep(6000);
+    WebElement f83 = driver.findElementById("com.autonavi.minimap:id/camera_ok_btn");
+    f83.click();
+
+    //点击提交
+    sleep(3000);
+    WebElement f9 = driver.findElementByXPath("//*[@text='提交']");
+    f9.click();
+    sleep(8000);
+}
 
 
 
